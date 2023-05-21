@@ -12,11 +12,11 @@
 #   MakeMaker Parameters:
 
 #     ABSTRACT_FROM => q[lib/OpenAIGPT4.pm]
-#     AUTHOR => [q[Your Name <your@email.com>]]
+#     AUTHOR => [q[pannakoota@gmail.com]]
 #     BUILD_REQUIRES => {  }
 #     CONFIGURE_REQUIRES => {  }
 #     LICENSE => q[perl]
-#     META_MERGE => { meta-spec=>{ version=>q[2] }, resources=>{ repository=>{ type=>q[git], url=>q[http://github.com/yourusername/yourrepository], web=>q[http://github.com/yourusername/yourrepository] } } }
+#     META_MERGE => { meta-spec=>{ version=>q[2] }, resources=>{ repository=>{ type=>q[git], url=>q[https://github.com/kawamurashingo/OpenAIGPT4.git], web=>q[https://github.com/kawamurashingo/OpenAIGPT4.git] } } }
 #     NAME => q[OpenAIGPT4]
 #     PREREQ_PM => { HTTP::Request::Common=>q[0], JSON=>q[0], LWP::UserAgent=>q[0] }
 #     TEST_REQUIRES => {  }
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = OpenAIGPT4
 NAME_SYM = OpenAIGPT4
-VERSION = 0.01
+VERSION = 0.02
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_01
+VERSION_SYM = 0_02
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.01
+XS_VERSION = 0.02
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -168,7 +168,7 @@ C_FILES  =
 O_FILES  = 
 H_FILES  = 
 MAN1PODS = 
-MAN3PODS = 
+MAN3PODS = lib/OpenAIGPT4.pm
 
 # Where is the Config information that we are using/depend on
 CONFIGDEP = $(PERL_ARCHLIBDEP)$(DFSEP)Config.pm $(PERL_INCDEP)$(DFSEP)config.h
@@ -261,7 +261,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = OpenAIGPT4
-DISTVNAME = OpenAIGPT4-0.01
+DISTVNAME = OpenAIGPT4-0.02
 
 
 # --- MakeMaker macro section:
@@ -414,8 +414,10 @@ POD2MAN_EXE = $(PERLRUN) "-MExtUtils::Command::MM" -e pod2man "--"
 POD2MAN = $(POD2MAN_EXE)
 
 
-manifypods : pure_all config 
-	$(NOECHO) $(NOOP)
+manifypods : pure_all config  \
+	lib/OpenAIGPT4.pm
+	$(NOECHO) $(POD2MAN) --section=$(MAN3SECTION) --perm_rw=$(PERM_RW) -u \
+	  lib/OpenAIGPT4.pm $(INST_MAN3DIR)/OpenAIGPT4.$(MAN3EXT) 
 
 
 
@@ -483,9 +485,9 @@ realclean purge :: realclean_subdirs
 metafile : create_distdir
 	$(NOECHO) $(ECHO) Generating META.yml
 	$(NOECHO) $(ECHO) '---' > META_new.yml
-	$(NOECHO) $(ECHO) 'abstract: unknown' >> META_new.yml
+	$(NOECHO) $(ECHO) 'abstract: '\''Interact with the OpenAI GPT-4 API'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'author:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  - '\''Your Name <your@email.com>'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '  - pannakoota@gmail.com' >> META_new.yml
 	$(NOECHO) $(ECHO) 'build_requires:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  ExtUtils::MakeMaker: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'configure_requires:' >> META_new.yml
@@ -506,15 +508,15 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '  JSON: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) '  LWP::UserAgent: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'resources:' >> META_new.yml
-	$(NOECHO) $(ECHO) '  repository: http://github.com/yourusername/yourrepository' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version: '\''0.01'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '  repository: https://github.com/kawamurashingo/OpenAIGPT4.git' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version: '\''0.02'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'x_serialization_backend: '\''CPAN::Meta::YAML version 0.018'\''' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
 	$(NOECHO) $(ECHO) Generating META.json
 	$(NOECHO) $(ECHO) '{' > META_new.json
-	$(NOECHO) $(ECHO) '   "abstract" : "unknown",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "abstract" : "Interact with the OpenAI GPT-4 API",' >> META_new.json
 	$(NOECHO) $(ECHO) '   "author" : [' >> META_new.json
-	$(NOECHO) $(ECHO) '      "Your Name <your@email.com>"' >> META_new.json
+	$(NOECHO) $(ECHO) '      "pannakoota@gmail.com"' >> META_new.json
 	$(NOECHO) $(ECHO) '   ],' >> META_new.json
 	$(NOECHO) $(ECHO) '   "dynamic_config" : 1,' >> META_new.json
 	$(NOECHO) $(ECHO) '   "generated_by" : "ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010",' >> META_new.json
@@ -555,11 +557,11 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '   "resources" : {' >> META_new.json
 	$(NOECHO) $(ECHO) '      "repository" : {' >> META_new.json
 	$(NOECHO) $(ECHO) '         "type" : "git",' >> META_new.json
-	$(NOECHO) $(ECHO) '         "url" : "http://github.com/yourusername/yourrepository",' >> META_new.json
-	$(NOECHO) $(ECHO) '         "web" : "http://github.com/yourusername/yourrepository"' >> META_new.json
+	$(NOECHO) $(ECHO) '         "url" : "https://github.com/kawamurashingo/OpenAIGPT4.git",' >> META_new.json
+	$(NOECHO) $(ECHO) '         "web" : "https://github.com/kawamurashingo/OpenAIGPT4.git"' >> META_new.json
 	$(NOECHO) $(ECHO) '      }' >> META_new.json
 	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "version" : "0.01",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "version" : "0.02",' >> META_new.json
 	$(NOECHO) $(ECHO) '   "x_serialization_backend" : "JSON::PP version 4.06"' >> META_new.json
 	$(NOECHO) $(ECHO) '}' >> META_new.json
 	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
@@ -869,9 +871,9 @@ testdb_static :: static pure_all
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.01">' > OpenAIGPT4.ppd
-	$(NOECHO) $(ECHO) '    <ABSTRACT></ABSTRACT>' >> OpenAIGPT4.ppd
-	$(NOECHO) $(ECHO) '    <AUTHOR>Your Name &lt;your@email.com&gt;</AUTHOR>' >> OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.02">' > OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '    <ABSTRACT>Interact with the OpenAI GPT-4 API</ABSTRACT>' >> OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '    <AUTHOR>pannakoota@gmail.com</AUTHOR>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="HTTP::Request::Common" />' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="JSON::" />' >> OpenAIGPT4.ppd

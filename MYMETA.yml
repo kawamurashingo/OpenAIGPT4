@@ -1,7 +1,7 @@
 ---
-abstract: unknown
+abstract: 'Interact with the OpenAI GPT-4 API'
 author:
-  - 'Your Name <your@email.com>'
+  - pannakoota@gmail.com
 build_requires:
   ExtUtils::MakeMaker: '0'
 configure_requires:
@@ -22,6 +22,6 @@ requires:
   JSON: '0'
   LWP::UserAgent: '0'
 resources:
-  repository: http://github.com/yourusername/yourrepository
-version: '0.01'
+  repository: https://github.com/kawamurashingo/OpenAIGPT4.git
+version: '0.02'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
