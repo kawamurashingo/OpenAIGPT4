@@ -106,7 +106,10 @@ sub new {
 }
 
 sub generate_text {
-    my ($self, $prompt) = @_;
+    my ($self, $prompt, $model, $temperature) = @_;
+
+    $model //= 'gpt-3.5-turbo';
+    $temperature //= 0.7;
 
     push @{$self->{history}}, {role => 'user', content => $prompt};
 
@@ -114,8 +117,8 @@ sub generate_text {
         Content_Type => 'application/json',
         Content => to_json({
             messages => $self->{history},
-            model => 'gpt-3.5-turbo',
-            temperature => 0.7
+            model => $model,
+            temperature => $temperature,
         }),
         Authorization => 'Bearer ' . $self->{api_key};
 
