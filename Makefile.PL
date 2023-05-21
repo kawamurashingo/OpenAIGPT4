@@ -1,5 +1,5 @@
 use ExtUtils::MakeMaker;
-use 5.034;
+use 5.032;
 
 WriteMakefile(
     NAME                => 'OpenAIGPT4',
