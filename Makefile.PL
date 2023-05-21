@@ -10,6 +10,7 @@ WriteMakefile(
     PREREQ_PM           => {
         'LWP::UserAgent'    => 0,
         'HTTP::Request::Common' => 0,
+        'LWP::Protocol::https' => 0,
         'JSON' => 0,
     },
     ($ExtUtils::MakeMaker::VERSION >= 6.3002
