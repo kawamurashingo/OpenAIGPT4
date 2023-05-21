@@ -1,7 +1,7 @@
 {
-   "abstract" : "unknown",
+   "abstract" : "Interact with the OpenAI GPT-4 API",
    "author" : [
-      "Your Name <your@email.com>"
+      "pannakoota@gmail.com"
    ],
    "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010",
@@ -42,10 +42,10 @@
    "resources" : {
       "repository" : {
          "type" : "git",
-         "url" : "http://github.com/yourusername/yourrepository",
-         "web" : "http://github.com/yourusername/yourrepository"
+         "url" : "https://github.com/kawamurashingo/OpenAIGPT4.git",
+         "web" : "https://github.com/kawamurashingo/OpenAIGPT4.git"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_serialization_backend" : "JSON::PP version 4.06"
 }

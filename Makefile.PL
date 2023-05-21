@@ -20,8 +20,8 @@ WriteMakefile(
         resources => {
             repository => {
                 type => 'git',
-                url  => 'http://github.com/yourusername/yourrepository',
-                web  => 'http://github.com/yourusername/yourrepository',
+                url  => 'https://github.com/kawamurashingo/OpenAIGPT4.git',
+                web  => 'https://github.com/kawamurashingo/OpenAIGPT4.git',
             },
         },
     },
