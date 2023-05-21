@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.05 2023-05-22
+    - Added LWP::Protocol::https.
+
 0.04 2023-05-22
     - Edited use 5.032;.
 
