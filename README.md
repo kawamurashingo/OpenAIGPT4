@@ -46,6 +46,7 @@ print $generated_text;
 This module depends on the following Perl modules:
 
 - LWP::UserAgent
+- LWP::Protocol::https
 - HTTP::Request::Common
 - JSON
 
