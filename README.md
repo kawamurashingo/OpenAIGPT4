@@ -30,7 +30,7 @@ First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
 use OpenAIGPT4;
-my $gpt4 = OpenAIGPT4->new($api_key);
+my $gpt = OpenAIGPT4->new('<your_api_key>');
 ```
 
 Then, generate text by providing a prompt:
