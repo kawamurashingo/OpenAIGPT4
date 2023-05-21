@@ -17,7 +17,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.02
+Version 0.04
 
 =head1 SYNOPSIS
 
