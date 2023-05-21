@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
@@ -18,7 +18,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.05
+Version 0.06
 
 =head1 SYNOPSIS
 
@@ -94,6 +94,7 @@ sub new {
     my $self = {
         api_key => $api_key,
         ua      => LWP::UserAgent->new,
+        history => [], # Keep track of conversation history
     };
 
     return bless $self, $class;
@@ -102,13 +103,12 @@ sub new {
 sub generate_text {
     my ($self, $prompt) = @_;
 
+    push @{$self->{history}}, {role => 'user', content => $prompt};
+
     my $req = POST 'https://api.openai.com/v1/chat/completions',
         Content_Type => 'application/json',
         Content => to_json({
-            messages => [{
-                role => 'user',
-                content => $prompt
-            }],
+            messages => $self->{history},
             model => 'gpt-3.5-turbo',
             temperature => 0.7
         }),
@@ -118,9 +118,15 @@ sub generate_text {
 
     if ($res->is_success) {
         my $data = from_json($res->decoded_content);
-        return $data->{choices}[0]{message}{content};
+        my $reply = $data->{choices}[0]{message}{content};
+
+        # Add the model's reply to the conversation history
+        push @{$self->{history}}, {role => 'system', content => $reply};
+
+        return $reply;
     }
     else {
         die $res->status_line;
     }
 }
+1;

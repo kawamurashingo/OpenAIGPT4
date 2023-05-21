@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.06 2023-05-22
+    - Add a new key named history within the object, which is used to keep track of previous messages.
+
 0.05 2023-05-22
     - Added LWP::Protocol::https.
 
