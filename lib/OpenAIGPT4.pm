@@ -3,12 +3,12 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
 use LWP::UserAgent;
-use LWP::Protocol::https
+use LWP::Protocol::https;
 use HTTP::Request::Common qw(POST);
 use JSON;
 
@@ -18,7 +18,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.06
+Version 0.07
 
 =head1 SYNOPSIS
 
