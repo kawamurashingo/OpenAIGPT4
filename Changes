@@ -1,0 +1,6 @@
+Revision history for Perl module OpenAIGPT4
+
+0.01 2023-05-22
+    - First version, released on an unsuspecting world.
+    - Implemented `new` method for creating a new OpenAIGPT4 object.
+    - Implemented `generate_text` method for generating text using the OpenAI GPT-4 API.

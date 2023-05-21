@@ -1,0 +1,44 @@
+OpenAIGPT4
+
+DESCRIPTION
+
+OpenAIGPT4 is a Perl module for interacting with the OpenAI GPT-4 API.
+
+FEATURES
+
+This module allows for generation of natural language text using the OpenAI GPT-4 API.
+
+INSTALLATION
+
+To install this module from CPAN, you can use the following command:
+
+    cpan OpenAIGPT4
+
+Alternatively, you can use CPANM to install:
+
+    cpanm OpenAIGPT4
+
+USAGE
+
+First, create a new OpenAIGPT4 object:
+
+    use OpenAIGPT4;
+    my $gpt4 = OpenAIGPT4->new($api_key);
+
+Then, use the generate_text method to generate text:
+
+    my $prompt = "Once upon a time";
+    my $generated_text = $gpt4->generate_text($prompt);
+    print $generated_text;
+
+DEPENDENCIES
+
+This module depends on the following Perl modules:
+
+    - LWP::UserAgent
+    - HTTP::Request::Common
+    - JSON
+
+LICENSE
+
+This module is released under the Artistic License 2.0.
