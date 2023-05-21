@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.03 2023-05-22
+    - Added use 5.034;.
+
 0.02 2023-05-22
     - Improved document information.
 
