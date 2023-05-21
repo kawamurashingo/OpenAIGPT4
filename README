@@ -1,44 +1,56 @@
-OpenAIGPT4
+# OpenAIGPT4 Perl Module
 
-DESCRIPTION
+OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI GPT-4 API. With this module, you can easily generate natural language text.
 
-OpenAIGPT4 is a Perl module for interacting with the OpenAI GPT-4 API.
+## Features
 
-FEATURES
+- Generate text that sounds like natural language with the OpenAI GPT-4 API.
 
-This module allows for generation of natural language text using the OpenAI GPT-4 API.
+## Installation
 
-INSTALLATION
+You can install this module from CPAN using one of the following commands:
 
-To install this module from CPAN, you can use the following command:
+With CPAN:
 
-    cpan OpenAIGPT4
+```perl
+cpan OpenAIGPT4
+```
 
-Alternatively, you can use CPANM to install:
+With CPANM:
 
-    cpanm OpenAIGPT4
+```perl
+cpanm OpenAIGPT4
+```
 
-USAGE
+## Usage
 
-First, create a new OpenAIGPT4 object:
+Here is a basic example of using this module:
 
-    use OpenAIGPT4;
-    my $gpt4 = OpenAIGPT4->new($api_key);
+First, import the module and create a new OpenAIGPT4 object:
 
-Then, use the generate_text method to generate text:
+```perl
+use OpenAIGPT4;
+my $gpt4 = OpenAIGPT4->new($api_key);
+```
 
-    my $prompt = "Once upon a time";
-    my $generated_text = $gpt4->generate_text($prompt);
-    print $generated_text;
+Then, generate text by providing a prompt:
 
-DEPENDENCIES
+```perl
+my $prompt = "Once upon a time";
+my $generated_text = $gpt4->generate_text($prompt);
+print $generated_text;
+```
+
+## Dependencies
 
 This module depends on the following Perl modules:
 
-    - LWP::UserAgent
-    - HTTP::Request::Common
-    - JSON
+- LWP::UserAgent
+- HTTP::Request::Common
+- JSON
 
-LICENSE
+## License
 
-This module is released under the Artistic License 2.0.
+This module is distributed under the terms of the Artistic License 2.0.
+
+Please see [LICENSE](https://opensource.org/licenses/Artistic-2.0) for more details.
