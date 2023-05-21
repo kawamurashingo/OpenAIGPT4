@@ -1,7 +1,7 @@
 # OpenAIGPT4 Perl Module
 
 OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI GPT-4 API. With this module, you can easily generate natural language text.
-
+https://metacpan.org/pod/OpenAIGPT4
 ## Features
 
 - Generate text that sounds like natural language with the OpenAI GPT-4 API.
@@ -30,7 +30,7 @@ First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
 use OpenAIGPT4;
-my $gpt4 = OpenAIGPT4->new($api_key);
+my $gpt = OpenAIGPT4->new('<your_api_key>');
 ```
 
 Then, generate text by providing a prompt:
