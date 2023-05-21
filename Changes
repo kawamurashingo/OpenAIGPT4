@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.07 2023-05-22
+    - Added ";".
+
 0.06 2023-05-22
     - Add a new key named history within the object, which is used to keep track of previous messages.
 
