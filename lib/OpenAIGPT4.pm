@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
@@ -18,7 +18,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.09
+Version 0.10
 
 =head1 SYNOPSIS
 
