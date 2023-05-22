@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.09 2023-05-22
+    - The open ai host url is optional, and can be used for running against a LocalAI API server.
+
 0.08 2023-05-22
     - Edited Makefile.PL.
 
