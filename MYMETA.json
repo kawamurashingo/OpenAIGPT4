@@ -47,6 +47,6 @@
          "web" : "https://github.com/kawamurashingo/OpenAIGPT4.git"
       }
    },
-   "version" : "0.08",
+   "version" : "0.09",
    "x_serialization_backend" : "JSON::PP version 4.06"
 }
