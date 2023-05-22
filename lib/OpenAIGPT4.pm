@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
@@ -18,13 +18,13 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.10
+Version 0.11
 
 =head1 SYNOPSIS
 
     use OpenAIGPT4;
 
-    my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
+    my $gpt = OpenAIGPT4->new('<your_api_key>');
     my $response = $gpt->generate_text('Hello, how are you?');
     print $response;
 
@@ -60,13 +60,13 @@ This program is free software; you can redistribute it and/or modify it under th
 
     use OpenAIGPT4;
 
-    my $gpt = OpenAIGPT4->new('<your_api_key>', 'https://api.openai.com');
+    my $gpt = OpenAIGPT4->new('<your_api_key>');
     my $response = $gpt->generate_text('Hello, how are you?');
     print $response;
 
     # Or for a more interactive example:
 
-    my $gpt4 = OpenAIGPT4->new('<your_api_key>', 'https://api.openai.com');
+    my $gpt4 = OpenAIGPT4->new('<your_api_key>');
     print "ChatGPT: Hello! Let's start a conversation.\n";
 
     while (1) {
