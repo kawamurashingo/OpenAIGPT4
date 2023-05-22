@@ -24,5 +24,5 @@ requires:
   LWP::UserAgent: '0'
 resources:
   repository: https://github.com/kawamurashingo/OpenAIGPT4.git
-version: '0.09'
+version: '0.10'
 x_serialization_backend: 'CPAN::Meta::YAML version 0.018'
