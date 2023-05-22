@@ -24,7 +24,7 @@ Version 0.09
 
     use OpenAIGPT4;
 
-    my $gpt = OpenAIGPT4->new('<your_api_key>');
+    my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
     my $response = $gpt->generate_text('Hello, how are you?');
     print $response;
 
