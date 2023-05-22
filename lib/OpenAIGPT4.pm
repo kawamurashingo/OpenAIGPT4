@@ -36,9 +36,9 @@ This module provides a Perl interface to the OpenAI GPT-4 API. It currently supp
 
 =head2 new
 
-    my $gpt = OpenAIGPT4->new('<your_api_key>');
+    my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
 
-This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the argument.
+This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the argument.  The open ai host url is optional, and can be used for running against a LocalAI API server.
 
 =head2 generate_text
 
@@ -86,14 +86,19 @@ This program is free software; you can redistribute it and/or modify it under th
         }
     }
 
+=head1 SEE ALSO
+
+L<LocalAI|https://github.com/go-skynet/LocalAI> - LocalAI is an OpenAI API compatible system for locally hosting models
+
 =cut
 
 sub new {
-    my ($class, $api_key) = @_;
+    my ($class, $api_key, $api_host) = @_;
 
     my $self = {
         api_key => $api_key,
         ua      => LWP::UserAgent->new,
+        api_host => $api_host // 'https://api.openai.com',
         history => [], # Keep track of conversation history
     };
 
@@ -101,16 +106,19 @@ sub new {
 }
 
 sub generate_text {
-    my ($self, $prompt) = @_;
+    my ($self, $prompt, $model, $temperature) = @_;
+
+    $model //= 'gpt-3.5-turbo';
+    $temperature //= 0.7;
 
     push @{$self->{history}}, {role => 'user', content => $prompt};
 
-    my $req = POST 'https://api.openai.com/v1/chat/completions',
+    my $req = POST $self->{api_host}.'/v1/chat/completions',
         Content_Type => 'application/json',
         Content => to_json({
             messages => $self->{history},
-            model => 'gpt-3.5-turbo',
-            temperature => 0.7
+            model => $model,
+            temperature => $temperature,
         }),
         Authorization => 'Bearer ' . $self->{api_key};
 
