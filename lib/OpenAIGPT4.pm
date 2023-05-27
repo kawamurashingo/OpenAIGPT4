@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.11';
+our $VERSION = '0.12';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
@@ -18,7 +18,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-4 API
 
 =head1 VERSION
 
-Version 0.11
+Version 0.12
 
 =head1 SYNOPSIS
 
@@ -42,9 +42,9 @@ This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API 
 
 =head2 generate_text
 
-    my $response = $gpt->generate_text('Hello, how are you?');
+    my $response = $gpt->generate_text('Hello, how are you?', 'gpt-4');
 
-This method generates text given a prompt. The argument should be a string containing the prompt. It returns the generated text.
+This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo'. It returns the generated text.
 
 =head1 AUTHOR
 
@@ -59,12 +59,6 @@ This program is free software; you can redistribute it and/or modify it under th
 =head1 SYNOPSIS
 
     use OpenAIGPT4;
-
-    my $gpt = OpenAIGPT4->new('<your_api_key>');
-    my $response = $gpt->generate_text('Hello, how are you?');
-    print $response;
-
-    # Or for a more interactive example:
 
     my $gpt4 = OpenAIGPT4->new('<your_api_key>');
     print "ChatGPT: Hello! Let's start a conversation.\n";
