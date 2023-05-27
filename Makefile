@@ -1,7 +1,7 @@
 # This Makefile is for the OpenAIGPT4 extension to perl.
 #
 # It was generated automatically by MakeMaker version
-# 7.70 (Revision: 77000) from the contents of
+# 7.64 (Revision: 76400) from the contents of
 # Makefile.PL. Don't edit this file, edit Makefile.PL instead.
 #
 #       ANY CHANGES MADE HERE WILL BE LOST!
@@ -27,7 +27,7 @@
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level/Config.pm).
+# These definitions are from config.sh (via /usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -39,16 +39,16 @@ DLSRC = dl_dlopen.xs
 EXE_EXT = 
 FULL_AR = /usr/bin/ar
 LD = cc
-LDDLFLAGS =  -mmacosx-version-min=12.4 -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector-strong
-LDFLAGS =  -mmacosx-version-min=12.4 -fstack-protector-strong -L/usr/local/lib
+LDDLFLAGS =  -mmacosx-version-min=12.6 -bundle -undefined dynamic_lookup -L/usr/local/lib -fstack-protector-strong
+LDFLAGS =  -mmacosx-version-min=12.6 -fstack-protector-strong -L/usr/local/lib
 LIBC = 
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = darwin
-OSVERS = 21.5.0
+OSVERS = 21.6.0
 RANLIB = ranlib
-SITELIBEXP = /usr/local/opt/perl/lib/perl5/site_perl/5.34
-SITEARCHEXP = /usr/local/opt/perl/lib/perl5/site_perl/5.34/darwin-thread-multi-2level
+SITELIBEXP = /usr/local/opt/perl/lib/perl5/site_perl/5.36
+SITEARCHEXP = /usr/local/opt/perl/lib/perl5/site_perl/5.36/darwin-thread-multi-2level
 SO = dylib
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = OpenAIGPT4
 NAME_SYM = OpenAIGPT4
-VERSION = 0.11
+VERSION = 0.12
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_11
+VERSION_SYM = 0_12
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.11
+XS_VERSION = 0.12
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -80,57 +80,57 @@ MAN3SECTION = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /usr/local/Cellar/perl/5.34.0_1
+PERLPREFIX = /usr/local/Cellar/perl/5.36.1
 SITEPREFIX = /usr/local/opt/perl
 VENDORPREFIX = 
-INSTALLPRIVLIB = /usr/local/Cellar/perl/5.34.0_1/lib/perl5/5.34
+INSTALLPRIVLIB = /usr/local/Cellar/perl/5.36.1/lib/perl5/5.36
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /usr/local/Cellar/perl/5.34.0_1/lib/perl5/site_perl/5.34
+INSTALLSITELIB = /usr/local/Cellar/perl/5.36.1/lib/perl5/site_perl/5.36
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /usr/local/Cellar/perl/5.34.0_1/lib/perl5/5.34/darwin-thread-multi-2level
+INSTALLARCHLIB = /usr/local/Cellar/perl/5.36.1/lib/perl5/5.36/darwin-thread-multi-2level
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /usr/local/Cellar/perl/5.34.0_1/lib/perl5/site_perl/5.34/darwin-thread-multi-2level
+INSTALLSITEARCH = /usr/local/Cellar/perl/5.36.1/lib/perl5/site_perl/5.36/darwin-thread-multi-2level
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /usr/local/Cellar/perl/5.34.0_1/bin
+INSTALLBIN = /usr/local/Cellar/perl/5.36.1/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /usr/local/Cellar/perl/5.34.0_1/bin
+INSTALLSITEBIN = /usr/local/Cellar/perl/5.36.1/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /usr/local/Cellar/perl/5.34.0_1/bin
+INSTALLSCRIPT = /usr/local/Cellar/perl/5.36.1/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /usr/local/Cellar/perl/5.34.0_1/bin
+INSTALLSITESCRIPT = /usr/local/Cellar/perl/5.36.1/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /usr/local/Cellar/perl/5.34.0_1/share/man/man1
+INSTALLMAN1DIR = /usr/local/Cellar/perl/5.36.1/share/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /usr/local/Cellar/perl/5.34.0_1/share/man/man1
+INSTALLSITEMAN1DIR = /usr/local/Cellar/perl/5.36.1/share/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /usr/local/Cellar/perl/5.34.0_1/share/man/man3
+INSTALLMAN3DIR = /usr/local/Cellar/perl/5.36.1/share/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /usr/local/Cellar/perl/5.34.0_1/share/man/man3
+INSTALLSITEMAN3DIR = /usr/local/Cellar/perl/5.36.1/share/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
-PERL_LIB = /usr/local/opt/perl/lib/perl5/5.34
-PERL_ARCHLIB = /usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level
-PERL_ARCHLIBDEP = /usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level
+PERL_LIB = /usr/local/opt/perl/lib/perl5/5.36
+PERL_ARCHLIB = /usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level
+PERL_ARCHLIBDEP = /usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level/CORE
-PERL_INCDEP = /usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level/CORE
-PERL = "/usr/local/Cellar/perl/5.34.0_1/bin/perl"
-FULLPERL = "/usr/local/Cellar/perl/5.34.0_1/bin/perl"
+PERL_INC = /usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level/CORE
+PERL_INCDEP = /usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level/CORE
+PERL = "/usr/local/Cellar/perl/5.36.1/bin/perl"
+FULLPERL = "/usr/local/Cellar/perl/5.36.1/bin/perl"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -143,9 +143,9 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /usr/local/opt/perl/lib/perl5/site_perl/5.34/ExtUtils/MakeMaker.pm
-MM_VERSION  = 7.70
-MM_REVISION = 77000
+MAKEMAKER   = /usr/local/opt/perl/lib/perl5/5.36/ExtUtils/MakeMaker.pm
+MM_VERSION  = 7.64
+MM_REVISION = 76400
 
 # FULLEXT = Pathname for extension directory (eg Foo/Bar/Oracle).
 # BASEEXT = Basename part of FULLEXT. May be just equal FULLEXT. (eg Oracle)
@@ -195,7 +195,7 @@ TO_INST_PM = lib/OpenAIGPT4.pm
 
 
 # --- MakeMaker platform_constants section:
-MM_Unix_VERSION = 7.70
+MM_Unix_VERSION = 7.64
 PERL_MALLOC_DEF = -DPERL_EXTMALLOC_DEF -Dmalloc=Perl_malloc -Dfree=Perl_mfree -Drealloc=Perl_realloc -Dcalloc=Perl_calloc
 
 
@@ -261,7 +261,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = OpenAIGPT4
-DISTVNAME = OpenAIGPT4-0.11
+DISTVNAME = OpenAIGPT4-0.12
 
 
 # --- MakeMaker macro section:
@@ -493,7 +493,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) 'configure_requires:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  ExtUtils::MakeMaker: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'dynamic_config: 1' >> META_new.yml
-	$(NOECHO) $(ECHO) 'generated_by: '\''ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) 'generated_by: '\''ExtUtils::MakeMaker version 7.64, CPAN::Meta::Converter version 2.150010'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'license: perl' >> META_new.yml
 	$(NOECHO) $(ECHO) 'meta-spec:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  url: http://module-build.sourceforge.net/META-spec-v1.4.html' >> META_new.yml
@@ -510,7 +510,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '  LWP::UserAgent: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'resources:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  repository: https://github.com/kawamurashingo/OpenAIGPT4.git' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version: '\''0.11'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version: '\''0.12'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'x_serialization_backend: '\''CPAN::Meta::YAML version 0.018'\''' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
 	$(NOECHO) $(ECHO) Generating META.json
@@ -520,7 +520,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '      "pannakoota@gmail.com"' >> META_new.json
 	$(NOECHO) $(ECHO) '   ],' >> META_new.json
 	$(NOECHO) $(ECHO) '   "dynamic_config" : 1,' >> META_new.json
-	$(NOECHO) $(ECHO) '   "generated_by" : "ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "generated_by" : "ExtUtils::MakeMaker version 7.64, CPAN::Meta::Converter version 2.150010",' >> META_new.json
 	$(NOECHO) $(ECHO) '   "license" : [' >> META_new.json
 	$(NOECHO) $(ECHO) '      "perl_5"' >> META_new.json
 	$(NOECHO) $(ECHO) '   ],' >> META_new.json
@@ -563,8 +563,8 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '         "web" : "https://github.com/kawamurashingo/OpenAIGPT4.git"' >> META_new.json
 	$(NOECHO) $(ECHO) '      }' >> META_new.json
 	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "version" : "0.11",' >> META_new.json
-	$(NOECHO) $(ECHO) '   "x_serialization_backend" : "JSON::PP version 4.06"' >> META_new.json
+	$(NOECHO) $(ECHO) '   "version" : "0.12",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "x_serialization_backend" : "JSON::PP version 4.07"' >> META_new.json
 	$(NOECHO) $(ECHO) '}' >> META_new.json
 	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
 
@@ -821,8 +821,8 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = "/usr/local/Cellar/perl/5.34.0_1/bin/perl"
-MAP_PERLINC   = "-Iblib/arch" "-Iblib/lib" "-I/usr/local/opt/perl/lib/perl5/5.34/darwin-thread-multi-2level" "-I/usr/local/opt/perl/lib/perl5/5.34"
+FULLPERL      = "/usr/local/Cellar/perl/5.36.1/bin/perl"
+MAP_PERLINC   = "-Iblib/arch" "-Iblib/lib" "-I/usr/local/opt/perl/lib/perl5/5.36/darwin-thread-multi-2level" "-I/usr/local/opt/perl/lib/perl5/5.36"
 
 $(MAP_TARGET) :: $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -873,7 +873,7 @@ testdb_static :: static pure_all
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.11">' > OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.12">' > OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Interact with the OpenAI GPT-4 API</ABSTRACT>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>pannakoota@gmail.com</AUTHOR>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> OpenAIGPT4.ppd
@@ -881,7 +881,7 @@ ppd :
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="JSON::" />' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="LWP::Protocol::https" />' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '        <REQUIRE NAME="LWP::UserAgent" />' >> OpenAIGPT4.ppd
-	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-thread-multi-2level-5.34" />' >> OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '        <ARCHITECTURE NAME="darwin-thread-multi-2level-5.36" />' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '        <CODEBASE HREF="" />' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    </IMPLEMENTATION>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '</SOFTPKG>' >> OpenAIGPT4.ppd
