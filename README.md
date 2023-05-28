@@ -91,4 +91,3 @@ Please see [LICENSE](https://opensource.org/licenses/Artistic-2.0) for more deta
 
 ## SEE ALSO
 [LocalAI is an OpenAI API compatible system for locally hosting models](https://github.com/go-skynet/LocalAI)
-
