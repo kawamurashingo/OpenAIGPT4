@@ -24,6 +24,9 @@ With CPANM:
 cpanm OpenAIGPT4
 ```
 
+## Getting an API Key
+You will need an API key to use the OpenAI GPT-3,4 API. You can get an API key from [OpenAI's API key page](https://platform.openai.com/account/api-keys).
+
 ## Usage
 
 Here is a basic example of using this module:
