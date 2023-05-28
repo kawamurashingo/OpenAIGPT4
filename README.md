@@ -29,8 +29,6 @@ You will need an API key to use the OpenAI GPT-3,4 API. You can get an API key f
 
 ## Usage
 
-Here is a basic example of using this module:
-
 First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
