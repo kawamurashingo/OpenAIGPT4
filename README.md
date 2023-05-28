@@ -1,10 +1,12 @@
 # OpenAIGPT4 Perl Module
 
-OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI GPT-4 API. With this module, you can easily generate natural language text.
-https://metacpan.org/pod/OpenAIGPT4
+OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI GPT-3,4 API. With this module, you can easily generate natural language text.
+
+[OpenAIGPT4 on MetaCPAN](https://metacpan.org/pod/OpenAIGPT4)
+
 ## Features
 
-- Generate text that sounds like natural language with the OpenAI GPT-4 API.
+- Generate text that sounds like natural language with the OpenAI GPT-3,4 API.
 
 ## Installation
 
@@ -34,14 +36,42 @@ my $gpt = OpenAIGPT4->new('<your_api_key>');
 my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
 ```
 
-This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the argument. The open ai host url is optional, and can be used for running against a LocalAI API server.
+This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the argument. The open ai host url is optional, and can be used for running against a [LocalAI API server](https://github.com/go-skynet/LocalAI).
 
 Then, generate text by providing a prompt:
 
 ```perl
-my $prompt = "Once upon a time";
-my $generated_text = $gpt4->generate_text($prompt);
-print $generated_text;
+my $response = $gpt->generate_text('Hello, how are you?');
+my $response = $gpt->generate_text('Hello, how are you?', 'gpt-4');
+print $response;
+```
+
+This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo'. It returns the generated text.
+
+Here is an example of how you can use this module in an interactive manner:
+
+```perl
+use OpenAIGPT4;
+
+my $gpt = OpenAIGPT4->new('<your_api_key>');
+print "ChatGPT: Hello! Let's start a conversation.\n";
+
+while (1) {
+    print "User: ";
+    my $user_input = <STDIN>;
+    chomp $user_input;
+
+    # Send the user's input to the API and receive a response
+    my $response = $gpt->generate_text($user_input);
+
+    # Display the response
+    print "ChatGPT: $response\n";
+
+    # Check for exit condition (e.g., input of the keyword "exit")
+    if ($user_input eq 'exit') {
+        last; # Exit the loop to end the conversation
+    }
+}
 ```
 
 ## Dependencies
@@ -58,3 +88,7 @@ This module depends on the following Perl modules:
 This module is distributed under the terms of the Artistic License 2.0.
 
 Please see [LICENSE](https://opensource.org/licenses/Artistic-2.0) for more details.
+
+## SEE ALSO
+[LocalAI is an OpenAI API compatible system for locally hosting models](https://github.com/go-skynet/LocalAI)
+
