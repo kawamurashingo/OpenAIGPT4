@@ -38,7 +38,7 @@ or
 my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
 ```
 
-This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the argument. The open ai host url is optional, and can be used for running against a [LocalAI API server](https://github.com/go-skynet/LocalAI).
+This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the first argument. The second argument, the OpenAI host URL, is optional. If no host URL is provided, it defaults to 'https://api.openai.com'. If you are running against a [LocalAI API server](https://github.com/go-skynet/LocalAI), you will need to specify the host URL.
 
 Then, generate text by providing a prompt:
 
