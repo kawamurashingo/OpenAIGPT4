@@ -34,8 +34,6 @@ First, import the module and create a new OpenAIGPT4 object:
 ```perl
 use OpenAIGPT4;
 my $gpt = OpenAIGPT4->new('<your_api_key>');
-or
-my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://local_ai_host_url');
 ```
 
 This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the first argument. The second argument, the OpenAI host URL, is optional. If no host URL is provided, it defaults to 'https://api.openai.com'. If you are running against a [LocalAI API server](https://github.com/go-skynet/LocalAI), you will need to specify the host URL.
