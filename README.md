@@ -75,10 +75,6 @@ while (1) {
 }
 ```
 
-## Usage
-
-(既存の使用法の説明)
-
 ### Usage Demo
 
 The following YouTube link includes a usage demo for this module:
