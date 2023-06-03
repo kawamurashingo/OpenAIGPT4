@@ -75,6 +75,12 @@ while (1) {
 }
 ```
 
+### Usage Demo
+
+The following YouTube link includes a usage demo for this module:
+
+[![OpenAIGPT4 Perl Module Usage Demo](http://img.youtube.com/vi/0zHDT2CTjV0/0.jpg)](http://www.youtube.com/watch?v=0zHDT2CTjV0 "OpenAIGPT4 Perl Module Usage Demo")
+
 ## Dependencies
 
 This module depends on the following Perl modules:
