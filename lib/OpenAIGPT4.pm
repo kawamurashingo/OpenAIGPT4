@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.13';
+our $VERSION = '0.14';
 
 # ABSTRACT: Interact with the OpenAI GPT-4 API
 
@@ -18,7 +18,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-3,4 API
 
 =head1 VERSION
 
-Version 0.13
+Version 0.14
 
 =head1 SYNOPSIS
 
@@ -128,7 +128,16 @@ sub generate_text {
         return $reply;
     }
     else {
-        die $res->status_line;
+        my $error_message = $res->status_line;
+        if ($res->content) {
+            my $error_data = eval { from_json($res->content) };
+            if ($@) {
+                $error_message .= " Error decoding response body: $@";
+            } else {
+                $error_message .= " Response body: " . to_json($error_data);
+            }
+        }
+        die $error_message;
     }
 }
 1;
