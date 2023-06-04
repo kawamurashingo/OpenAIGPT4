@@ -32,21 +32,13 @@ You will need an API key to use the OpenAI GPT-3,4 API. You can get an API key f
 
 ### Rate Limits and Billing
 
-Please be aware that the use of the OpenAI GPT-3,4 API is subject to rate limits and is a paid service. The rate limits restrict the number of API requests you can make within a certain time period, and the cost of usage is determined by the plan you have subscribed to.
-
-If you are seeing a 429 Too Many Requests error with an insufficient_quota message, this means you have exceeded your current quota for API usage. Please check your plan and billing details on the OpenAI platform.
-
-For more detailed information about the specific rate limits and billing details of different plans, please refer to the official OpenAI Pricing page.
-
-Note: If you exceed your rate limit, you may encounter a delay in API responses or temporarily lose the ability to make API requests.
-
-For specific rate limits, refer to the following URL: https://platform.openai.com/account/rate-limits
+Using the OpenAI GPT-3,4 API involves rate limits and costs, dictated by your subscription plan. Exceeding your quota will result in an error message and possible delays or temporary suspension of API requests. For detailed information, visit [OpenAI's Pricing page](https://platform.openai.com/account/rate-limits).
 
 First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
 use OpenAIGPT4;
-my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url', 1);  # The last parameter is the debug flag
+my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
 ```
 
 This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the first argument. The second argument, the OpenAI host URL, is optional. If no host URL is provided, it defaults to 'https://api.openai.com'. If you are running against a [LocalAI API server](https://github.com/go-skynet/LocalAI), you will need to specify the host URL.
