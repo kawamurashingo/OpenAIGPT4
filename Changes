@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.13 2023-06-04
+    - Updated the generate_text method in OpenAIGPT4 module to include response body in the error message when API request fails.
+
 0.13 2023-05-28
     - Edited Makefile.PL.
 
