@@ -7,6 +7,7 @@ OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI
 ## Features
 
 - Generate text that sounds like natural language with the OpenAI GPT-3,4 API.
+- Debug mode for detailed logging of HTTP requests and responses to and from the OpenAI API.
 
 ## Installation
 
@@ -45,10 +46,28 @@ First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
 use OpenAIGPT4;
-my $gpt = OpenAIGPT4->new('<your_api_key>');
+my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url', 1);  # The last parameter is the debug flag
 ```
 
 This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the first argument. The second argument, the OpenAI host URL, is optional. If no host URL is provided, it defaults to 'https://api.openai.com'. If you are running against a [LocalAI API server](https://github.com/go-skynet/LocalAI), you will need to specify the host URL.
+
+### Debug Mode
+
+The module includes a debug mode that provides detailed logging of HTTP requests and responses when interacting with the OpenAI API. This is useful for troubleshooting and understanding the behavior of the API calls.
+
+To enable debug mode, pass a truthy value (1 in this case) as the third argument while creating a new OpenAIGPT4 object.
+
+```perl
+use OpenAIGPT4;
+my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url', 1);  # The last parameter is the debug flag
+```
+
+If the debug flag is set, the module will print the details of the HTTP requests and responses to the console:
+
+```
+Request: POST <API URL> ...
+Response: 200 OK ...
+```
 
 Then, generate text by providing a prompt:
 
