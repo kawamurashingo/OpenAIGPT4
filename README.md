@@ -29,6 +29,16 @@ You will need an API key to use the OpenAI GPT-3,4 API. You can get an API key f
 
 ## Usage
 
+### Rate Limits and Billing
+
+Please be aware that usage of the OpenAI GPT-3,4 API is subject to rate limits and is a paid service. The rate limits, which limit the number of API requests you can make in a given time period, and the cost of usage are determined by the plan you have subscribed to.
+
+If you are seeing a 429 Too Many Requests error with an insufficient_quota message, this means you have exceeded your current quota for API usage. Please check your plan and billing details on the OpenAI platform.
+
+For more information about the specific rate limits and billing details of different plans, please refer to the official OpenAI Pricing page.
+
+Note: If you exceed your rate limit, you may encounter a delay in API responses or temporarily lose the ability to make API requests.
+
 First, import the module and create a new OpenAIGPT4 object:
 
 ```perl
