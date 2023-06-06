@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.15'; # Incremented version number
+our $VERSION = '0.16'; # Incremented version number
 
 use LWP::UserAgent;
 use LWP::Protocol::https;
@@ -16,13 +16,13 @@ OpenAIGPT4 - Interact with the OpenAI GPT-3,4 API
 
 =head1 VERSION
 
-Version 0.15
+Version 0.16
 
 =head1 SYNOPSIS
 
     use OpenAIGPT4;
 
-    my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url', 1); # The last parameter is the debug flag
+    my $gpt = OpenAIGPT4->new('<your_api_key>');
 
     print "ChatGPT: Hello! Let's start a conversation.\n";
 
