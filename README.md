@@ -12,6 +12,12 @@ OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI
 ## Installation
 
 You can install this module from CPAN using one of the following commands:
+```bash
+perl Makefile.PL
+make
+make test
+make install
+```
 
 With CPAN:
 
