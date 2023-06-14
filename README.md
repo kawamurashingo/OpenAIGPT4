@@ -70,7 +70,7 @@ my $response = $gpt->generate_text('Hello, how are you?', 'gpt-4', 0.5);
 print $response;
 ```
 
-This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo'. The third argument is also optional and represents the temperature of the generated text. It defaults to 0.7 if not provided. The temperature parameter controls the randomness of the generated text. Lower values (e.g., 0.2) produce more focused and consistent outputs, while higher values (e.g., 0.8) produce more diverse and random outputs. It returns the generated text.
+This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo-0613'. The third argument is also optional and represents the temperature of the generated text. It defaults to 0.7 if not provided. The temperature parameter controls the randomness of the generated text. Lower values (e.g., 0.2) produce more focused and consistent outputs, while higher values (e.g., 0.8) produce more diverse and random outputs. It returns the generated text.
 
 Here is an example of how you can use this module in an interactive manner:
 

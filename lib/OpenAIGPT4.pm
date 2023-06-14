@@ -3,7 +3,7 @@ package OpenAIGPT4;
 use strict;
 use warnings;
 
-our $VERSION = '0.16'; # Incremented version number
+our $VERSION = '0.17'; # Incremented version number
 
 use LWP::UserAgent;
 use LWP::Protocol::https;
@@ -16,7 +16,7 @@ OpenAIGPT4 - Interact with the OpenAI GPT-3,4 API
 
 =head1 VERSION
 
-Version 0.16
+Version 0.17
 
 =head1 SYNOPSIS
 
@@ -59,7 +59,7 @@ This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API 
 
     my $response = $gpt->generate_text('Hello, how are you?', 'gpt-4');
 
-This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo'. It returns the generated text.
+This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo-0613'. It returns the generated text.
 
 =head1 AUTHOR
 
@@ -90,7 +90,7 @@ sub new {
 sub generate_text {
     my ($self, $prompt, $model, $temperature) = @_;
 
-    $model //= 'gpt-3.5-turbo';
+    $model //= 'gpt-3.5-turbo-0613';
     $temperature //= 0.7;
 
     push @{$self->{history}}, {role => 'user', content => $prompt};
