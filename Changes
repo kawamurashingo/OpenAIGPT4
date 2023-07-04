@@ -1,4 +1,7 @@
 Revision history for Perl module OpenAIGPT4
+0.18 2023-07-04
+    - Support perl v5.26
+
 0.17 2023-06-14
     - Change default model from gpt-3.5-turbo to gpt-3.5-turbo-0613
 0.15 2023-06-05
