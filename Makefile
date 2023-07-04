@@ -18,7 +18,7 @@
 #     LICENSE => q[perl]
 #     META_MERGE => { meta-spec=>{ version=>q[2] }, resources=>{ repository=>{ type=>q[git], url=>q[https://github.com/kawamurashingo/OpenAIGPT4.git], web=>q[https://github.com/kawamurashingo/OpenAIGPT4.git] } } }
 #     NAME => q[OpenAIGPT4]
-#     PREREQ_PM => { HTTP::Request::Common=>q[0], JSON=>q[0], LWP::Protocol::https=>q[0], LWP::UserAgent=>q[0], perl=>q[5.032] }
+#     PREREQ_PM => { HTTP::Request::Common=>q[0], JSON=>q[0], LWP::Protocol::https=>q[0], LWP::UserAgent=>q[0], perl=>q[5.026] }
 #     TEST_REQUIRES => {  }
 #     VERSION_FROM => q[lib/OpenAIGPT4.pm]
 
@@ -60,11 +60,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = OpenAIGPT4
 NAME_SYM = OpenAIGPT4
-VERSION = 0.17
+VERSION = 0.18
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_17
+VERSION_SYM = 0_18
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.17
+XS_VERSION = 0.18
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -261,7 +261,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = OpenAIGPT4
-DISTVNAME = OpenAIGPT4-0.17
+DISTVNAME = OpenAIGPT4-0.18
 
 
 # --- MakeMaker macro section:
@@ -508,10 +508,10 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '  JSON: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) '  LWP::Protocol::https: '\''0'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) '  LWP::UserAgent: '\''0'\''' >> META_new.yml
-	$(NOECHO) $(ECHO) '  perl: '\''5.032'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) '  perl: '\''5.026'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'resources:' >> META_new.yml
 	$(NOECHO) $(ECHO) '  repository: https://github.com/kawamurashingo/OpenAIGPT4.git' >> META_new.yml
-	$(NOECHO) $(ECHO) 'version: '\''0.17'\''' >> META_new.yml
+	$(NOECHO) $(ECHO) 'version: '\''0.18'\''' >> META_new.yml
 	$(NOECHO) $(ECHO) 'x_serialization_backend: '\''CPAN::Meta::YAML version 0.018'\''' >> META_new.yml
 	-$(NOECHO) $(MV) META_new.yml $(DISTVNAME)/META.yml
 	$(NOECHO) $(ECHO) Generating META.json
@@ -553,7 +553,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '            "JSON" : "0",' >> META_new.json
 	$(NOECHO) $(ECHO) '            "LWP::Protocol::https" : "0",' >> META_new.json
 	$(NOECHO) $(ECHO) '            "LWP::UserAgent" : "0",' >> META_new.json
-	$(NOECHO) $(ECHO) '            "perl" : "5.032"' >> META_new.json
+	$(NOECHO) $(ECHO) '            "perl" : "5.026"' >> META_new.json
 	$(NOECHO) $(ECHO) '         }' >> META_new.json
 	$(NOECHO) $(ECHO) '      }' >> META_new.json
 	$(NOECHO) $(ECHO) '   },' >> META_new.json
@@ -565,7 +565,7 @@ metafile : create_distdir
 	$(NOECHO) $(ECHO) '         "web" : "https://github.com/kawamurashingo/OpenAIGPT4.git"' >> META_new.json
 	$(NOECHO) $(ECHO) '      }' >> META_new.json
 	$(NOECHO) $(ECHO) '   },' >> META_new.json
-	$(NOECHO) $(ECHO) '   "version" : "0.17",' >> META_new.json
+	$(NOECHO) $(ECHO) '   "version" : "0.18",' >> META_new.json
 	$(NOECHO) $(ECHO) '   "x_serialization_backend" : "JSON::PP version 4.07"' >> META_new.json
 	$(NOECHO) $(ECHO) '}' >> META_new.json
 	-$(NOECHO) $(MV) META_new.json $(DISTVNAME)/META.json
@@ -875,7 +875,7 @@ testdb_static :: static pure_all
 # --- MakeMaker ppd section:
 # Creates a PPD (Perl Package Description) for a binary distribution.
 ppd :
-	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.17">' > OpenAIGPT4.ppd
+	$(NOECHO) $(ECHO) '<SOFTPKG NAME="OpenAIGPT4" VERSION="0.18">' > OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <ABSTRACT>Interact with the OpenAI GPT-3,4 API</ABSTRACT>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <AUTHOR>pannakoota@gmail.com</AUTHOR>' >> OpenAIGPT4.ppd
 	$(NOECHO) $(ECHO) '    <IMPLEMENTATION>' >> OpenAIGPT4.ppd
