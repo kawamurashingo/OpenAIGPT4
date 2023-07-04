@@ -16,19 +16,19 @@ You can install this module from CPAN using one of the following commands:
 perl Makefile.PL
 make
 make test
-make install
+sudo make install
 ```
 
 With CPAN:
 
 ```perl
-cpan OpenAIGPT4
+sudo cpan OpenAIGPT4
 ```
 
 With CPANM:
 
 ```perl
-cpanm OpenAIGPT4
+sudo cpanm OpenAIGPT4
 ```
 
 ## Getting an API Key
