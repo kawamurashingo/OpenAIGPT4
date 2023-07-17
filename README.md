@@ -71,6 +71,8 @@ my $gpt = OpenAIGPT4->new('YOUR_OPENAI_API_KEY', undef, 1);
 
 With this flag set, details of the requests and responses will be outputted.
 
+### SYNOPSIS
+
 ```perl
 use OpenAIGPT4;
 
