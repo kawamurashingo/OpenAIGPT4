@@ -4,6 +4,15 @@ OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI
 
 [OpenAIGPT4 on MetaCPAN](https://metacpan.org/pod/OpenAIGPT4)
 
+## Dependencies
+
+This module depends on the following Perl modules:
+
+- LWP::UserAgent
+- LWP::Protocol::https
+- HTTP::Request::Common
+- JSON
+
 ## Features
 
 - Generate text that sounds like natural language with the OpenAI GPT-3,4 API.
@@ -113,15 +122,6 @@ The following YouTube link includes a usage demo for this module:
 ## Author
 
 Kawamura Shingo (pannakoota@gmail.com)
-
-## Dependencies
-
-This module depends on the following Perl modules:
-
-- LWP::UserAgent
-- LWP::Protocol::https
-- HTTP::Request::Common
-- JSON
 
 ## License
 
