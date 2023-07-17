@@ -103,7 +103,7 @@ while (1) {
 
 ### Caution
 
-Using the OpenAI GPT-3,4 API involves rate limits and costs, dictated by your subscription plan. Exceeding your quota will result in an error message and possible delays or temporary suspension of API requests. For detailed information, visit [OpenAI's Pricing page](https://platform.openai.com/account/rate-limits).
+Using the OpenAI GPT API involves rate limits and costs, dictated by your subscription plan. Exceeding your quota will result in an error message and possible delays or temporary suspension of API requests. For detailed information, visit [OpenAI's Pricing page](https://platform.openai.com/account/rate-limits).
 
 ### Usage Demo
 
