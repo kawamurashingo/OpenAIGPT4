@@ -2,8 +2,6 @@
 
 OpenAIGPT4 is a Perl module that enables developers to interface with the OpenAI GPT-3,4 API. With this module, you can easily generate natural language text.
 
-[OpenAIGPT4 on MetaCPAN](https://metacpan.org/pod/OpenAIGPT4)
-
 ## Dependencies
 
 This module depends on the following Perl modules:
@@ -130,4 +128,5 @@ This module is distributed under the terms of the Artistic License 2.0.
 Please see [LICENSE](https://opensource.org/licenses/Artistic-2.0) for more details.
 
 ## SEE ALSO
+[OpenAIGPT4 on MetaCPAN](https://metacpan.org/pod/OpenAIGPT4)
 [LocalAI is an OpenAI API compatible system for locally hosting models](https://github.com/go-skynet/LocalAI)
