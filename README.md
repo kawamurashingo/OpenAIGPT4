@@ -30,13 +30,7 @@ make install
 With CPAN:
 
 ```perl
-sudo cpan OpenAIGPT4
-```
-
-With CPANM:
-
-```perl
-sudo cpanm OpenAIGPT4
+cpan OpenAIGPT4
 ```
 
 ## Getting an API Key
