@@ -36,49 +36,40 @@ You will need an API key to use the OpenAI GPT-3,4 API. You can get an API key f
 
 ## Usage
 
-### Rate Limits and Billing
-
-Using the OpenAI GPT-3,4 API involves rate limits and costs, dictated by your subscription plan. Exceeding your quota will result in an error message and possible delays or temporary suspension of API requests. For detailed information, visit [OpenAI's Pricing page](https://platform.openai.com/account/rate-limits).
-
-First, import the module and create a new OpenAIGPT4 object:
+### Create an OpenAIGPT4 object
 
 ```perl
 use OpenAIGPT4;
-my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url');
+my $gpt = OpenAIGPT4->new('YOUR_OPENAI_API_KEY');
 ```
 
-This constructor returns a new OpenAIGPT4 object. You must pass your OpenAI API key as the first argument. The second argument, the OpenAI host URL, is optional. If no host URL is provided, it defaults to 'https://api.openai.com'. If you are running against a [LocalAI API server](https://github.com/go-skynet/LocalAI), you will need to specify the host URL.
+Replace 'YOUR_OPENAI_API_KEY' with your API key obtained from the OpenAI dashboard.
 
-### Debug Mode
+### Generate text
 
-The module includes a debug mode that provides detailed logging of HTTP requests and responses when interacting with the OpenAI API. This is useful for troubleshooting and understanding the behavior of the API calls.
-
-To enable debug mode, pass a truthy value (1 in this case) as the third argument while creating a new OpenAIGPT4 object.
+Use the generate_text method to generate text. This method takes a prompt and returns the model's response.
 
 ```perl
-use OpenAIGPT4;
-my $gpt = OpenAIGPT4->new('<your_api_key>', 'http://open_ai_host_url', 1);  # The last parameter is the debug flag
-```
-
-If the debug flag is set, the module will print the details of the HTTP requests and responses to the console:
-
-```
-Request: POST <API URL> ...
-Response: 200 OK ...
-```
-
-Then, generate text by providing a prompt:
-
-```perl
-my $response = $gpt->generate_text('Hello, how are you?');
-or
-my $response = $gpt->generate_text('Hello, how are you?', 'gpt-4', 0.5);
+my $response = $gpt->generate_text('Tell me a joke');
 print $response;
 ```
 
-This method generates text given a prompt. The first argument should be a string containing the prompt. The second argument is optional and can be used to specify the model to be used for the generation. If no model is specified, it defaults to 'gpt-3.5-turbo-0613'. The third argument is also optional and represents the temperature of the generated text. It defaults to 0.7 if not provided. The temperature parameter controls the randomness of the generated text. Lower values (e.g., 0.2) produce more focused and consistent outputs, while higher values (e.g., 0.8) produce more diverse and random outputs. It returns the generated text.
+The generate_text method can also accept a model name and temperature parameter as options.
 
-Here is an example of how you can use this module in an interactive manner:
+```
+my $response = $gpt->generate_text('Tell me a joke', 'gpt-4', 0.8);
+print $response;
+```
+
+### Debugging
+
+If you need debugging, set the debug flag in the new method.
+
+```perl
+my $gpt = OpenAIGPT4->new('YOUR_OPENAI_API_KEY', undef, 1);
+```
+
+With this flag set, details of the requests and responses will be outputted.
 
 ```perl
 use OpenAIGPT4;
@@ -103,6 +94,10 @@ while (1) {
     }
 }
 ```
+
+### Caution
+
+Using the OpenAI GPT-3,4 API involves rate limits and costs, dictated by your subscription plan. Exceeding your quota will result in an error message and possible delays or temporary suspension of API requests. For detailed information, visit [OpenAI's Pricing page](https://platform.openai.com/account/rate-limits).
 
 ### Usage Demo
 
