@@ -54,10 +54,10 @@ my $response = $gpt->generate_text('Tell me a joke');
 print $response;
 ```
 
-The generate_text method can also accept a model name and temperature parameter as options.
+The generate_text method can also accept a model name and temperature parameter as options. By default, if not specified, the model name is set to 'gpt-4' and temperature to 0.7.
 
 ```
-my $response = $gpt->generate_text('Tell me a joke', 'gpt-4', 0.8);
+my $response = $gpt->generate_text('Tell me a joke', 'gpt-3.5-turbo-0613', 0.8);
 print $response;
 ```
 
@@ -71,7 +71,9 @@ my $gpt = OpenAIGPT4->new('YOUR_OPENAI_API_KEY', undef, 1);
 
 With this flag set, details of the requests and responses will be outputted.
 
-### SYNOPSIS
+### Interactive Conversation
+
+You can also create an interactive conversation with gpt-4 using a loop. Here's an example:
 
 ```perl
 use OpenAIGPT4;
