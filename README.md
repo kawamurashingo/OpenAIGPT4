@@ -74,7 +74,7 @@ With this flag set, details of the requests and responses will be outputted.
 ```perl
 use OpenAIGPT4;
 
-my $gpt = OpenAIGPT4->new('<your_api_key>');
+my $gpt = OpenAIGPT4->new('YOUR_OPENAI_API_KEY');
 print "ChatGPT: Hello! Let's start a conversation.\n";
 
 while (1) {
