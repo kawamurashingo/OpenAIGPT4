@@ -128,5 +128,7 @@ This module is distributed under the terms of the Artistic License 2.0.
 Please see [LICENSE](https://opensource.org/licenses/Artistic-2.0) for more details.
 
 ## SEE ALSO
+
 [OpenAIGPT4 on MetaCPAN](https://metacpan.org/pod/OpenAIGPT4)
+
 [LocalAI is an OpenAI API compatible system for locally hosting models](https://github.com/go-skynet/LocalAI)
