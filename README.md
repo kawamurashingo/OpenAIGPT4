@@ -16,7 +16,7 @@ You can install this module from CPAN using one of the following commands:
 perl Makefile.PL
 make
 make test
-sudo make install
+make install
 ```
 
 With CPAN:
